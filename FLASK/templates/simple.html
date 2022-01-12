@@ -1,0 +1,101 @@
+{% extends "index.html" %}
+{% block mainContent %}
+
+<div class="jumbotron jumbotron-fluid"> 
+    <div class="container">
+        <h1 class="display-8">Alocação Otimizada</h1>
+        <p class="lead">Escreva os ativos do seu portfólio </p>
+    </div>
+</div>
+
+<div class="container">
+    <div>Resultado: </div>
+    <div class="col-lg-7" readonly>
+    <p class="alert alert-success">{{result}}</p>
+    </div>
+</div>
+
+<div>
+    <form class="container" action="{{url_for('calculate')}}" method="post">
+        <div class="row">
+            <p>Quanto você tem para investir?</p>
+            <div class="col-lg-2 col-md-3">
+                <input type="number" name="totalInvestment" class="form-control" placeholder="1000" required>
+            </div>
+        </div>
+    
+        <div class="col-lg-7 col-md-3 mt-3">
+            <p>Quais são os ativos do seu porfolio?</p>
+            
+            <div class="row">
+                <div class="col-lg-2 col-md-3 mt-3">
+                    <input type="text" name="asset" class="form-control" placeholder="ITSA4" required>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-2 col-md-3 mt-3">
+                    <input type="text" name="asset" class="form-control" placeholder="NUBR33" required>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-2 col-md-3 mt-3">
+                    <input type="text" name="asset" class="form-control" placeholder="MXRF11">
+                </div>
+            </div>
+    
+    
+            <div class="row">
+                <div class="col-lg-2 col-md-3 mt-3">
+                    <input type="text" name="asset" class="form-control" placeholder="HASH11">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-2 col-md-3 mt-3">
+                    <input type="text" name="asset" class="form-control" placeholder="ITUB3">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-2 col-md-3 mt-3">
+                    <input type="text" name="asset" class="form-control" placeholder="ITUB4">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-2 col-md-3 mt-3">
+                    <input type="text" name="asset" class="form-control" placeholder="EMBR3">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-2 col-md-3 mt-3">
+                    <input type="text" name="asset" class="form-control" placeholder="B3SA3">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-2 col-md-3 mt-3">
+                    <input type="text" name="asset" class="form-control" placeholder="WEGE3">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-2 col-md-3 mt-3">
+                    <input type="text" name="asset" class="form-control" placeholder="BMGB4">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-3 mt-3">
+                    <input type="submit" value="calculate" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    
+    </form>
+</div>
+
+{% endblock %}
